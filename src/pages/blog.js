@@ -31,14 +31,14 @@ export default function Blog() {
                     {postData && postData.map((post, index) => (
                     <article>
                         <Link to={'/posts/' + post.slug.current}>
-                        <span className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400' key={index}>
+                        <span className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-indigo-400' key={index}>
                             <img 
                                 src={post.mainImage.asset.url}
                                 alt={post.mainImage.alt}
                                 className='w-full h-full rounded-r object-cover absolute'
                             />
                             <span className='block relative h-full flex justify-end items-end pr-4 pb-4'>
-                                <h3 className='text-gray-800 text-lg font-blog px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded'>{post.title}</h3>
+                                <h3 className='text-gray-800 text-lg font-blog px-3 py-4 gray  bg-opacity-75 rounded'>{post.title}</h3>
                             </span>
                         </span>
                         </Link>
