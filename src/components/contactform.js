@@ -36,7 +36,7 @@ export const ContactUs = () => {
                         <textarea rows='10' type="text" className='form-control' placeholder='Your Message' name='message'/>
                     </div>
                     <div className='col-8 pt-3 mx-auto'>
-                        <input type="submit" className='btn btn-info' value='Send Message'/>
+                        <input type="submit" className='btn gray' value='Send Message'/>
                     </div>
                 </div>
             </form>

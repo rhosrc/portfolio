@@ -11644,7 +11644,7 @@ body {
 
 .tech-section {
   background-color: #646ECB;
-  padding: 5rem;
+  padding: 5rem 0;
 }
 
 .tech-section h1 {
@@ -11659,14 +11659,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   justify-items: center;
+  @media screen and (min-width: 650px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media screen and (min-width: 950px) {
+    width: 60%;
+  }    
     
-    @media screen and (min-width: 650px) {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    @media screen and (min-width: 950px) {
-        width: 60%;
-    }
 }
+
+
 
 .icon {
   font-size: 2.5rem;

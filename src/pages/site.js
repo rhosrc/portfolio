@@ -8,7 +8,6 @@ import dex from '../images/flashcard.jpg'
 import memos from '../images/swiftmemos.png'
 import trakit from '../images/trakit.png'
 import beanie from '../images/beaniecollect.png'
-import header from '../images/header.png'
 
 
 const Site = () => {
@@ -20,7 +19,7 @@ const Site = () => {
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Chris Lafortune</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Web Developer</h2>
-                        <a class="btn btn-primary" href="#contact">Reach out</a>
+                        <a class="btn gray" href="#contact">Reach out</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +31,7 @@ const Site = () => {
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <p>I am a web developer with a background in technology education and nonprofit program development. I'm passionate about building MERN-stack applications with intuitive, aesthetically pleasing functionality. When not coding, you can find me biking, skateboarding, writing, and curating music playlists.</p>
-                        <a class="btn btn-primary" href="https://drive.google.com/file/d/1JO9AdMKTwbPvVoTaSrTJKyz6dhLHQ0cH/view?usp=sharing">Download My Resume</a>
+                        <a class="btn gray" href="https://drive.google.com/file/d/1JO9AdMKTwbPvVoTaSrTJKyz6dhLHQ0cH/view?usp=sharing">Download My Resume</a>
                     </div>
                 </div>  
             </div>
