@@ -24,16 +24,16 @@ export const ContactUs = () => {
             <form ref={form} onSubmit={sendEmail}>
                 <div className='row pt-5 mx-auto'>
                     <div className='col-8 form-group mx-auto'>
-                        <input type="text" className='form-control' placeholder='Name' name='from_name'/>
+                        <input required type="text" className='form-control' placeholder='Name' name='from_name'/>
                     </div>
                     <div className='col-8 form-group pt-2 mx-auto'>
-                        <input type="email" className='form-control' placeholder='Email Address' name='reply_to'/>
+                        <input required type="email" className='form-control' placeholder='Email Address' name='reply_to'/>
                     </div>
                     <div className='col-8 form-group pt-2 mx-auto'>
-                        <input type="text" className='form-control' placeholder='Subject' name='subject'/>
+                        <input required type="text" className='form-control' placeholder='Subject' name='subject'/>
                     </div>
                     <div className='col-8 form-group pt-2 mx-auto'>
-                        <textarea rows='10' type="text" className='form-control' placeholder='Your Message' name='message'/>
+                        <textarea required rows='10' type="text" className='form-control' placeholder='Your Message' name='message'/>
                     </div>
                     <div className='col-8 pt-3 mx-auto'>
                         <input type="submit" className='btn gray' value='Send Message'/>

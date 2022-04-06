@@ -170,7 +170,7 @@ const Site = () => {
       
         <section class="contact-section bluish" id='contact'>
             <div>
-                <h1 class='text-white'>Get in Touch with Me!</h1>
+                <h1>Get in Touch with Me!</h1>
                 <ContactUs />
 
             </div>
