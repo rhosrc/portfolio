@@ -11750,11 +11750,7 @@ body {
   padding-top: 5rem;
 }
 
-.contact-section h1 {
-  color: #EAE7ED;
-}
-
-.contact-section label {
+.contact-section h1, label {
   color: #EAE7ED;
 }
 
