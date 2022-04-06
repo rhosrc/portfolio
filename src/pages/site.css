@@ -11754,6 +11754,14 @@ body {
   color: #EAE7ED;
 }
 
+.contact-section label {
+  color: #EAE7ED;
+}
+
+.contact-section form {
+  text-align: left;
+}
+
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #64a19d;
