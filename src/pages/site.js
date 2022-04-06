@@ -43,7 +43,7 @@ const Site = () => {
                     <div class="col-lg-8 skills-icons">
                         <div class="icon">
                         <i class="devicon-html5-plain"></i>
-                            <span>HTML</span>
+                            <span>HTML 5</span>
                         </div>
                         <div class="icon">
                         <i class="devicon-css3-plain"></i>
