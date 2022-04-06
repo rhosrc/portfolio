@@ -11584,7 +11584,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 75%, #000 100%), url("/src/images/header.png");
   background-position: center;
   background-repeat: no-repeat;
