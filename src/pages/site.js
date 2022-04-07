@@ -30,7 +30,7 @@ const Site = () => {
             <img class="img-fluid headshot" src={masthead} alt="..." />
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <p>I'm a web developer with a background in technology education and nonprofit program development. I'm passionate about building MERN-stack applications with intuitive, aesthetically pleasing functionality. <br /><br />When not coding, you can find me biking, skateboarding, writing, and curating music playlists.</p>
+                        <p>I'm a Boston-based web developer with a background in technology education and nonprofit program development. I'm passionate about building MERN-stack applications with intuitive, aesthetically pleasing functionality. <br /><br />When not coding, you can find me biking, skateboarding, writing, and curating music playlists.</p>
                         <a class="btn gray" href="https://drive.google.com/file/d/1bA7a1WTREJEQtOc0jZjKXQJHytOY4xst/view?usp=sharing">Download My Resume</a>
                     </div>
                 </div>  

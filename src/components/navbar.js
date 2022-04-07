@@ -14,15 +14,32 @@ export default class Example extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.closeNavbar = this.closeNavbar.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+
     this.state = {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+  closeNavbar() {
+    this.setState({
+        isOpen: false
+    });
+  }
+  handleClickOutside(event) {
+    const t = event.target;
+    if (this.state.isOpen && !t.classList.contains('navbar-toggler')) {
+        this.closeNavbar();
+    }
+  }
+
+
   render() {
     return (
       <div>
@@ -32,16 +49,16 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="#about">About</NavLink>
+                <NavLink href="#about" onClick={this.closeNavbar}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#projects">Projects</NavLink>
+                <NavLink href="#projects" onClick={this.closeNavbar}>Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact">Contact</NavLink>
+                <NavLink href="#contact" onClick={this.closeNavbar}>Contact</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/posts">Blog</NavLink>
+                <NavLink href="/posts" onClick={this.closeNavbar}>Blog</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
