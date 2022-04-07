@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import sanityClient from '../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
+import './site.css'
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -10,6 +11,8 @@ function urlFor(source) {
 }
 
 export default function SinglePost() {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    
     const [ singlePost, setSinglePost ] = useState(null);
     const { slug } = useParams();
 
@@ -25,6 +28,7 @@ export default function SinglePost() {
                 }
             },
             body,
+            publishedAt,
             'name': author->name,
             'authorImage': author->image
         }`).then((data) => setSinglePost(data[0]))
@@ -35,10 +39,10 @@ export default function SinglePost() {
 
     return (
         <main className='purplish min-h-screen p-12'>
-            <article className='container shadow-lg mx-auto gray rounded-lg'>
+            <article className='post-section container shadow-lg mx-auto gray rounded-lg'>
                 <header className='relative'>
-                    <div className='absolute h-full w-full flex items-center justify-center p-8'>
-                        <div className='bg-white bg-opacity-75 rounded p-12'>
+                    <div className='absolute h-full w-full flex items-center justify-center p-6'>
+                        <div className='title-card bg-white bg-opacity-75 rounded p-8'>
                             <h1 className='cursive text-3xl lg:text-6xl mb-4'>
                                 {singlePost.title}
                             </h1>
@@ -50,7 +54,11 @@ export default function SinglePost() {
                                 <p className='cursive flex items-center pl-2 text-2xl'>
                                     {singlePost.name}
                                 </p>
+                                
                             </div>
+                            <p className='cursive text-2xl'>
+                                    {new Date(singlePost.publishedAt).toLocaleDateString('en-US', options)}
+                                </p>
                         </div>
                     </div>
                     <img src={singlePost.mainImage.asset.url} 
@@ -59,7 +67,7 @@ export default function SinglePost() {
                     style={{ height: '400px' }}
                     />
                 </header>
-                <div className='px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full'>
+                <div className='post-body px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full'>
                     <BlockContent blocks={singlePost.body} 
                     projectId='26x7x90x'
                     dataset='production' 

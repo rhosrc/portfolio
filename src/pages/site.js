@@ -16,7 +16,7 @@ const Site = () => {
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
-                    <div class="text-center">
+                    <div class="tagline text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Chris Lafortune</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Clarifying, robust code solutions — one puzzle at a time.</h2>
                         <a class="btn gray" href="#about">Learn More</a>

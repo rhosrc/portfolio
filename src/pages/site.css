@@ -11584,7 +11584,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 10rem 0;
+  padding: 12.5rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 75%, #000 100%), url("/src/images/header.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -11625,6 +11625,10 @@ body {
     max-width: 30rem;
     font-size: 1.25rem;
   }
+}
+
+.tagline {
+  
 }
 
 .about-section {
@@ -11794,4 +11798,22 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.blog-section {
+  padding-top: 5rem;
+}
+
+.post-section {
+  margin-top: 5rem;
+}
+
+.title-card {
+  margin: 0;
+}
+
+.post-body {
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: left;
 }
