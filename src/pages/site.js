@@ -19,7 +19,7 @@ const Site = () => {
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Chris Lafortune</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Clarifying, robust code solutions — one puzzle at a time.</h2>
-                        <a class="btn gray" href="#contact">Reach out</a>
+                        <a class="btn gray" href="#about">Learn More</a>
                     </div>
                 </div>
             </div>
