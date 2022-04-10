@@ -151,7 +151,7 @@ const Site = () => {
                                     <h4 class="text-white">Beanie Collect</h4>
                                     <p class="mb-0 text-white-50"> Catalog and care for your beanie baby collection with this Django app! Beanie Collect uses Amazon S3 and is styled with  Material Design. </p>
                                     <br />
-                                    <p class="text-white"><a href="https://github.com/rhosrc/Beanie-Collect">GitHub</a> | <a href="https://flashcard-pokedex.netlify.app/">Demo</a></p>
+                                    <p class="text-white"><a href="https://github.com/rhosrc/Beanie-Collect">GitHub</a> | <a href="https://beaniecollect.herokuapp.com/">Demo</a></p>
                                 </div>
                             </div>
                         </div>
