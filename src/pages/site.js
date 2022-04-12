@@ -31,7 +31,9 @@ const Site = () => {
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <p>I'm a Boston-based web developer with a background in technology education and nonprofit program development. I'm passionate about building MERN-stack applications with intuitive, aesthetically pleasing functionality. <br /><br />When I'm not coding, you can find me biking, skateboarding, writing, and curating music playlists.</p>
-                        <a class="btn gray" href="https://drive.google.com/file/d/1bA7a1WTREJEQtOc0jZjKXQJHytOY4xst/view?usp=sharing">Download My Resume</a>
+                        <a class="about-button btn gray" href="https://drive.google.com/file/d/1dktUCvmZeYGXy08BBsO0dJmFMcTSrF0o/view?usp=sharing">Resume</a>
+                        <a class="about-button btn gray" href="https://www.linkedin.com/in/chris-lafortune/">LinkedIn</a>
+                        <a class="last-button btn gray" href="https://github.com/rhosrc">GitHub</a>
                     </div>
                 </div>  
             </div>
