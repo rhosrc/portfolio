@@ -103,8 +103,7 @@ const Site = () => {
                         <div class="icon">
                         <i class="devicon-amazonwebservices-original"></i>
                             <span>Amazon Web Services</span>
-                        </div>
-                        
+                        </div>      
                     </div>
                 </div>  
             </div>
