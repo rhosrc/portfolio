@@ -7,14 +7,23 @@ export const ContactUs = () => {
         <div className='contact-form container'>
             <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+      <input name="bot-field" />
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <input type="text" name="subject"/>
+      <textarea name="message"/>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+                
                 <div className='row pt-5 mx-auto'>
                 
                     <div className='col-8 form-group mx-auto'>
-                        <label for="from_name">Name *</label>
+                        <label for="name">Name *</label>
                         <input required type="text" className='form-control' name="name"/>
                     </div>
                     <div className='col-8 form-group pt-2 mx-auto'>
-                        <label for="reply_to">Email Address *</label>
+                        <label for="email">Email Address *</label>
                         <input required type="email" className='form-control' name="email"/>
                     </div>
                     <div className='col-8 form-group pt-2 mx-auto'>
