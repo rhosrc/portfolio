@@ -21,7 +21,8 @@ export const ContactUs = () => {
 
     return (
         <div className='contact-form container'>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+            <form name="contact" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className='row pt-5 mx-auto'>
                     <div class="hidden">
                     <label>
