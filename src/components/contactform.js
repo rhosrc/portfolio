@@ -5,14 +5,9 @@ export const ContactUs = () => {
 
     return (
         <div className='contact-form container'>
-            <form name="contact" method="POST">
+            <form name="contact" method="POST" data-netlify="true">
                 <div className='row pt-5 mx-auto'>
                 <input type="hidden" name="form-name" value="contact" />
-                    <div class="hidden">
-                    <label>
-                        Don’t fill this out if you’re human: <input name="bot-field" />
-                    </label>
-                    </div>
                     <div className='col-8 form-group mx-auto'>
                         <label for="from_name">Name *</label>
                         <input required type="text" className='form-control' name="name" id='name'/>
