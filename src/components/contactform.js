@@ -5,7 +5,7 @@ export const ContactUs = () => {
 
     return (
             
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
       <input name="bot-field" />
       <input type="text" name="name"/>
       <input type="email" name="email"/>
