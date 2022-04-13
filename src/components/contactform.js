@@ -5,8 +5,6 @@ export const ContactUs = () => {
 
     return (
         <div className='contact-form container'>
-            <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
       <input name="bot-field" />
       <input type="text" name="name"/>
@@ -14,7 +12,11 @@ export const ContactUs = () => {
       <input type="text" name="subject"/>
       <textarea name="message"/>
       <div data-netlify-recaptcha="true"></div>
+      <input type="submit" className='btn gray' value='Send Message'/>
     </form>
+            <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            
                 
                 <div className='row pt-5 mx-auto'>
                 
