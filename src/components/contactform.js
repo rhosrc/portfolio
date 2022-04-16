@@ -42,6 +42,7 @@ function ContactUs() {
         <>
         {state.formSubmitted ? <p>Thank you for contacting me!</p> :
         <form name="contact" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <div className='row pt-5 mx-auto'>
                 <div class="hidden">
                     <label>
