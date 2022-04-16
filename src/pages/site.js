@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './site.css'
-import { ContactUs } from '../components/contactform.js'
+import ContactUs from '../components/contactform.js'
 
 // import masthead from '../images/bg-masthead.jpeg'
 import masthead from '../images/about.jpg'
@@ -185,7 +185,10 @@ const Site = () => {
         <section class="contact-section bluish" id='contact'>
             <div>
                 <h1>Get in Touch with Me!</h1>
+                <div className='contact-form container'>
                 <ContactUs />
+                </div>
+                
 
             </div>
             <div class="container px-4 px-lg-5">

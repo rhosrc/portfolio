@@ -1,28 +1,53 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react'
 
-export const ContactUs = () => {
+function ContactUs() {
+    const [state, setState] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        formSubmitted: false
+    });
 
-    const form = useRef();
-    
-    const sendEmail = (e) => {
+    const encode = (data) => {
+        const {name, email, subject, message} = data
+        return `form-name=contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`
+    }
+
+    function handleChange(e) {
+        setState({...state, [e.target.name]: e.target.value })
+    }
+
+    async function handleSubmit(e) {
         e.preventDefault();
+        await fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            body: encode(state)
+        })
+        setState({...state, formSubmitted: true});
 
-        emailjs.sendForm('service_d2ux57n', 'template_1bqhreb', form.current, 'dyp1fhF9GDIreN8pd')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-        
-        e.target.reset();
+        setTimeout(() => setState({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+            formSubmitted: false}), 3000)
     }
 
 
     return (
-        <div className='contact-form container'>
-        <form ref={form} onSubmit={sendEmail}>
+        <>
+        {state.formSubmitted ? <p>Thank you for contacting me!</p> :
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
             <div className='row pt-5 mx-auto'>
+                <div class="hidden">
+                    <label>
+                        <input name="bot-field" />
+                    </label>
+                </div>
                 <div className='col-8 form-group mx-auto'>
                     <label for="from_name">Name *</label>
                     <input required type="text" className='form-control' name='from_name' id='from_name'/>
@@ -44,6 +69,9 @@ export const ContactUs = () => {
                 </div>
             </div>
         </form>
-        </div>
-    )
+         }
+        </>
+    );
 }
+
+export default ContactUs;
