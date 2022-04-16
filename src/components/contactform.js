@@ -11,7 +11,7 @@ function ContactUs() {
 
     const encode = (data) => {
         const {name, email, subject, message} = data
-        return `form-name=contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`
+        return `form-name=contactform&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`
     }
 
     function handleChange(e) {
@@ -41,8 +41,8 @@ function ContactUs() {
     return (
         <>
         {state.formSubmitted ? <p>Thank you for contacting me!</p> :
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
+        <form name="contactform" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contactform" />
             <div className='row pt-5 mx-auto'>
                 <div class="hidden">
                     <label>
