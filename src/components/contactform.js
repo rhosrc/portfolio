@@ -67,7 +67,6 @@ function ContactUs() {
                 <div className='col-8 pt-3 mx-auto'>
                     <button className='btn gray'>Send Message</button>
                 </div>
-        
         </form>
          }
         </>
