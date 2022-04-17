@@ -41,26 +41,31 @@ function ContactUs() {
     return (
         <>
         {state.formSubmitted ? <p>Thank you for contacting me!</p> :
-        <form name="contact" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
+                <div class="hidden">
+                    <label>
+                        Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                </div>
                 <div className='col-8 form-group mx-auto'>
                     <label for="name">Name *</label>
-                    <input required value={state.name} onChange={handleChange} type="text" className='form-control' name='name' id='from_name'/>
+                    <input required value={state.name} onChange={handleChange} type="text" className='form-control' name='name'/>
                 </div>
                 <div className='col-8 form-group pt-2 mx-auto'>
                     <label for="email">Email Address *</label>
-                    <input required value={state.email} onChange={handleChange} type="email" className='form-control' name='email' id='reply_to'/>
+                    <input required value={state.email} onChange={handleChange} type="email" className='form-control' name='email'/>
                 </div>
                 <div className='col-8 form-group pt-2 mx-auto'>
                     <label for="subject">Subject *</label>
-                    <input required value={state.subject} onChange={handleChange} type="text" className='form-control' name='subject' id='subject'/>
+                    <input required value={state.subject} onChange={handleChange} type="text" className='form-control' name='subject'/>
                 </div>
                 <div className='col-8 form-group pt-2 mx-auto'>
                     <label for="message">Message *</label>
-                    <textarea required value={state.message} onChange={handleChange} rows='10' type="text" className='form-control' name='message' id='message'/>
+                    <textarea required value={state.message} onChange={handleChange} rows='10' className='form-control' name='message'/>
                 </div>
                 <div className='col-8 pt-3 mx-auto'>
-                    <input type="submit" className='btn gray' value='Send Message'/>
+                    <button className='btn gray'>Send Message</button>
                 </div>
         
         </form>
