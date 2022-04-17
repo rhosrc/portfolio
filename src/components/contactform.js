@@ -40,7 +40,7 @@ function ContactUs() {
 
     return (
         <>
-        {state.formSubmitted ? <p>Thank you for contacting me!</p> :
+        {state.formSubmitted ? <p class="gray-text">Thank you for contacting me!</p> :
         <form name="contact" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
                 <div class="hidden">
