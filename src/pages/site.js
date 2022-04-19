@@ -150,7 +150,7 @@ const Site = () => {
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">Beanie Collect</h4>
-                                    <p class="mb-0 text-white-50"> Catalog and care for your beanie baby collection with this Django app! Beanie Collect uses Amazon S3 and is styled with  Material Design. </p>
+                                    <p class="mb-0 text-white-50"> Catalogue and care for your beanie baby collection with this Django app! Beanie Collect uses Amazon S3 and is styled with  Material Design. </p>
                                     <br />
                                     <p class="text-white"><a href="https://github.com/rhosrc/Beanie-Collect">GitHub</a> | <a href="https://beaniecollect.herokuapp.com/">Demo</a></p>
                                 </div>
