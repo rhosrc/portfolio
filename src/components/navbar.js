@@ -49,13 +49,13 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="#about" onClick={this.closeNavbar}>About</NavLink>
+                <NavLink href="/#about" onClick={this.closeNavbar}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#projects" onClick={this.closeNavbar}>Projects</NavLink>
+                <NavLink href="/#projects" onClick={this.closeNavbar}>Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact" onClick={this.closeNavbar}>Contact</NavLink>
+                <NavLink href="/#contact" onClick={this.closeNavbar}>Contact</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/posts" onClick={this.closeNavbar}>Blog</NavLink>
